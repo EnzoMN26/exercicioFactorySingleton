@@ -1,12 +1,13 @@
+import java.util.ArrayList;
 import java.util.LinkedList;
 
 public class Singleton{
 
     static Singleton instance;
-    LinkedList<Object> elementos;
+    ArrayList<Object> elementos;
 
     private Singleton(){
-        elementos = new LinkedList();
+        elementos = new ArrayList(10);
     }
 
     static public Singleton getInstance(){
@@ -28,5 +29,9 @@ public class Singleton{
 
     public Object getElement(int index){
         return elementos.get(index);
+    }
+
+    public ArrayList getElements(){
+        return new ArrayList(elementos);
     }
 }
