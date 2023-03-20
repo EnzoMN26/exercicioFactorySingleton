@@ -18,12 +18,16 @@ public class Singleton{
     }
 
     public void addElement(Object e){
-        elementos.add(e);    
+        if(!elementos.contains(e)){
+            elementos.add(e);
+        }    
     }
 
     public void addElement(Object... args){
         for (Object object : args) {
-            elementos.add(object);
+            if(!elementos.contains(object)){
+                elementos.add(object);
+            }
         }
     }
 
