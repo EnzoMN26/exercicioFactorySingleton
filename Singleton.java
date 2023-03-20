@@ -4,10 +4,10 @@ import java.util.LinkedList;
 public class Singleton{
 
     static Singleton instance;
-    ArrayList<Object> elementos;
+    LinkedList<Object> elementos;
 
     private Singleton(){
-        elementos = new ArrayList(10);
+        elementos = new LinkedList();
     }
 
     static public Singleton getInstance(){
@@ -31,7 +31,7 @@ public class Singleton{
         return elementos.get(index);
     }
 
-    public ArrayList getElements(){
-        return new ArrayList(elementos);
+    public LinkedList getElements(){
+        return new LinkedList(elementos);
     }
 }
