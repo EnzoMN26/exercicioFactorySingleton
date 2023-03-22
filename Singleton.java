@@ -1,4 +1,6 @@
 import java.util.ArrayList;
+import java.util.Collection;
+import java.util.Collections;
 import java.util.LinkedList;
 
 public class Singleton{
@@ -32,10 +34,12 @@ public class Singleton{
     }
 
     public Object getElement(int index){
+        elementos.sort(null);
         return elementos.get(index);
     }
 
     public LinkedList getElements(){
+        elementos.sort(null);
         return new LinkedList(elementos);
     }
 }
